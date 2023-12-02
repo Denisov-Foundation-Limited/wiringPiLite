@@ -5,6 +5,7 @@
  *	based in the Hitachi HD44780U controller and compatables.
  *
  * Copyright (c) 2012 Gordon Henderson.
+ * Modified (c) 2023 Sergey Denisov DenisovS21@gmail.com
  ***********************************************************************
  * This file is part of wiringPi:
  *	https://projects.drogon.net/raspberry-pi/wiringpi/

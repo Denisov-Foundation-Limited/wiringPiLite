@@ -19,3 +19,9 @@ set(SRC_LIST ${SRC_LIST} src/wiringSerial.c)
 
 add_library(${PROJECT_NAME} STATIC ${SRC_LIST})
 target_link_libraries(${PROJECT_NAME} -lm -lpthread -lrt -lcrypt)
+
+install(TARGETS wiringPiLite
+        RUNTIME DESTINATION bin
+        LIBRARY DESTINATION lib)
+
+install(TARGETS wiringPiLite DESTINATION /usr/lib)
