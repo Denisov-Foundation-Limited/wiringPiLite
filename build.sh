@@ -8,3 +8,4 @@
 
 cmake .
 cmake --build . -j4
+make install
