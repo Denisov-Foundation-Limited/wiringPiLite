@@ -15,6 +15,7 @@ set(SRC_LIST ${SRC_LIST} src/mcp23017.c)
 set(SRC_LIST ${SRC_LIST} src/pcf8574.c)
 set(SRC_LIST ${SRC_LIST} src/ads1115.c)
 set(SRC_LIST ${SRC_LIST} src/lcd.c)
+set(SRC_LIST ${SRC_LIST} src/piHiPri.c)
 set(SRC_LIST ${SRC_LIST} src/wiringSerial.c)
 
 add_library(${PROJECT_NAME} STATIC ${SRC_LIST})
