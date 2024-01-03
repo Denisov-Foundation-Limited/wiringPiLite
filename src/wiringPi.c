@@ -3277,9 +3277,7 @@ bool digitalRead (int pin, int *value)
 		else if (wiringPiMode != WPI_MODE_GPIO)
 			return false;
 
-		if (pin == -1)
-		{
-			printf("[%s %d]Pin %d is invalid, please check it over!\n", __func__, __LINE__, pin);
+		if (pin == -1) {
 			return false;
 		}
 
@@ -3288,9 +3286,9 @@ bool digitalRead (int pin, int *value)
 	}
 	else 
 	{
-		if ((node = wiringPiFindNode (pin)) == NULL)
+		if ((node = wiringPiFindNode (pin)) == NULL) {
 			return false;
-
+		}
 		return node->digitalRead (node, pin, value);
 	}
 	return false;

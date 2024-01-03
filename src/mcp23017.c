@@ -241,9 +241,9 @@ static bool mcpDigitalRead (struct wiringPiNodeStruct *node, int pin, int *value
   }
 
   if ((val & mask) == 0)
-    return *value = LOW ;
+    *value = LOW ;
   else 
-    return *value = HIGH ;
+    *value = HIGH ;
 
   return true;
 }

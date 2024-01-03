@@ -200,12 +200,12 @@ int wiringPiI2CWriteReg16 (int fd, int reg, int value)
 bool wiringPiI2CSetupInterface (const char *device, int devId, int *fd)
 {
   if ((*fd = open (device, O_RDWR)) < 0) {
-    wiringPiFailure (WPI_ALMOST, "Unable to open I2C device: %s\n", strerror (errno)) ;
+    wiringPiFailure (WPI_ALMOST, "Unable to open I2C device \"%s\": %s\n", device, strerror (errno)) ;
     return false;
   }
 
   if (ioctl (*fd, I2C_SLAVE, devId) < 0) {
-    wiringPiFailure (WPI_ALMOST, "Unable to select I2C device: %s\n", strerror (errno)) ;
+    wiringPiFailure (WPI_ALMOST, "Unable to select I2C device \"%s\" addr: %d error: %s\n", device, devId, strerror (errno)) ;
     return false;
   }
 
